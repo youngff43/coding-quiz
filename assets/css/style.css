@@ -20,3 +20,35 @@ header h1, h2{
     color: rgb(49, 10, 85);
 }
 
+/* END HEADER STYLES */
+
+button {
+    display: inline-block;
+    background-color: rgb(200, 147, 200);
+    border: solid 2px purple;
+    color: rgb(49, 10, 85);
+    text-align: center;
+    font-size: 25px;
+    padding: 8px;
+}
+
+button:hover {
+    background-color: rgb(49, 10, 85);
+    color: rgb(200, 147, 200);
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#beginning-quiz {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#quiz {
+    display: none;
+}
