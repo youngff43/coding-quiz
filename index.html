@@ -11,7 +11,7 @@
 <body>
     <div id="front-page">
     <header>
-        <h1 id="start-page-highscore" onclick="showHighscore()">View High Scores</h1>
+        <h1 id="start-page-highscore" onclick="viewScore()">View High Scores</h1>
         <h2 id=timer>Time:</h2>
     </header>
     </div>
@@ -29,10 +29,10 @@
                 <p>Question Placeholder</p>
             </div>
 
-            <button id="A" onclick="checkAnswer('A')">A</button>
-            <button id="B" onclick="checkAnswer('B')">B</button>
-            <button id="C" onclick="checkAnswer('C')">C</button>
-            <button id="D" onclick="checkAnswer('D')">D</button>
+            <button id="a" onclick="checkAnswer('a')">A</button>
+            <button id="b" onclick="checkAnswer('b')">B</button>
+            <button id="c" onclick="checkAnswer('c')">C</button>
+            <button id="d" onclick="checkAnswer('d')">D</button>
 
             <div id="answer-result"></div>
 
@@ -61,7 +61,7 @@
 
         <div id="final-buttons">
             <button id="go-back" onclick="replayQuiz()">Go Back</button>
-            <button id="clear-highscore" onclick="clearHighscore()">Clear High Scores</button>
+            <button id="clear-highscore" onclick="clearTable()">Clear High Scores</button>
         </div>
         </div>
     </div>
