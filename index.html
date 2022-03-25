@@ -9,11 +9,12 @@
 </head>
 
 <body>
-
+    <div id="front-page">
     <header>
         <h1 id="start-page-highscore" onclick="showHighscore()">View High Scores</h1>
         <h2 id=timer>Time:</h2>
     </header>
+    </div>
 
     <div class="container">
 
@@ -46,6 +47,7 @@
         </div>
 
         <div id="overall-highscore">
+        <div id="total-page">
         
             <div id="high-score-table">
                 <h4>User Initials</h4>
@@ -55,14 +57,16 @@
         <div id="highscore-initials"></div>
         <div id="highscore-score"></div>
 
+        </div>
+
         <div id="final-buttons">
             <button id="go-back" onclick="replayQuiz()">Go Back</button>
             <button id="clear-highscore" onclick="clearHighscore()">Clear High Scores</button>
         </div>
-
+        </div>
     </div>
 
     <script src="./assets/js/game.js"></script>
-    
+
 </body>
 </html>
