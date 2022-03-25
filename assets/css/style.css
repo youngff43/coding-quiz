@@ -30,6 +30,7 @@ button {
     text-align: center;
     font-size: 25px;
     padding: 8px;
+    margin: 5px;
 }
 
 button:hover {
@@ -49,6 +50,40 @@ button:hover {
     align-items: center;
 }
 
+#timer {
+    text-align: center;
+}
+
 #quiz {
     display: none;
+}
+
+#answer-result {
+    display: none;
+}
+
+#end-quiz {
+    text-align: center;
+    display: none;
+    flex-direction: column;
+    align-items: center;
+}
+
+#total-page{
+    display: none;
+    border: solid;
+}
+
+#highscore-table{
+    display: flex;
+    justify-content: space-around;
+}
+
+#overall-highscore{
+    height: 100%;
+    width: 100%;
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }

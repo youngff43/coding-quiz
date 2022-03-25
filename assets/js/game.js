@@ -3,10 +3,10 @@
 var questions = document.getElementById("questions");
 var lastQuestionIndex = quizQuestions.length;
 var currentQuestionIndex = 0;
-var buttonA = document.getElementById("A");
-var buttonB = document.getElementById("B");
-var buttonC = document.getElementById("C");
-var buttonD = document.getElementById("D");
+var buttonA = document.getElementById("a");
+var buttonB = document.getElementById("b");
+var buttonC = document.getElementById("c");
+var buttonD = document.getElementById("d");
 var endQuizDiv = document.getElementById("end-quiz");
 var startPageDiv = document.getElementById("front-page");
 var timerInterval; 
@@ -14,7 +14,7 @@ var actualTimer = document.getElementById("timer");
 var totalTime = 60;
 var actualQuiz = document.getElementById("quiz");
 var highScoreInitials = document.getElementById("highscore-initials");
-var endScore = document.getElementById("score");
+var finalScore = document.getElementById("score");
 var startQuizButton = document.getElementById("start-button");
 var submitScoreButton = document.getElementById("submit-score");
 var correct;
@@ -32,77 +32,77 @@ var quizQuestions = [{
     choiceB: "Home Tool Markup Language",
     choiceC: "Hyper Text Markup Language",
     choiceD: "Hard Tools Mean Less",
-    corrrectAnswer: "C"},
+    correctAnswer: "C"},
 {
     question: "What is the correct HTML element for the largest heading?",
     choiceA: "<head>",
     choiceB: "<header>",
     choiceC: "<h6>",
     choiceD: "<h1>",
-    corrrectAnswer: "D"},
+    correctAnswer: "D"},
 {
     question: "What does CSS stand for?",
     choiceA: "Computer Style Sheets",
     choiceB: "Creative Style Sheets",
     choiceC: "Cascading Style Sheets",
     choiceD: "Colorful Style Sheets",
-    corrrectAnswer: "C"},
+    correctAnswer: "C"},
 {
     question: "How is document type initialized in HTML5.?",
     choiceA: "</DOCTYPE HTML>",
     choiceB: "</DOCTYPE>",
     choiceC: "<!DOCTYPE HTML>",
     choiceD: "</DOCTYPE html>",
-    corrrectAnswer: "C"},
+    correctAnswer: "C"},
 {
     question: "Which of the following HTML Elements is used for making any text bold ?",
     choiceA: "<b>",
     choiceB: "<p>",
     choiceC: "<i>",
     choiceD: "<li>",
-    corrrectAnswer: "A"},
+    correctAnswer: "A"},
 {
     question: "Which of the following characters indicate closing of a tag?",
     choiceA: ".",
     choiceB: "/",
     choiceC: "//",
     choiceD: "!",
-    corrrectAnswer: "B"},
+    correctAnswer: "B"},
 {
     question: "How many attributes are there in HTML5?",
     choiceA: "1",
     choiceB: "2",
     choiceC: "3",
     choiceD: "4",
-    corrrectAnswer: "B"},
+    correctAnswer: "B"},
 {
     question: "Which of the following attributes is used to add a link to any element?",
     choiceA: "link",
     choiceB: "ref",
     choiceC: "href",
     choiceD: "<newref",
-    corrrectAnswer: "C"},
+    correctAnswer: "C"},
 {
     question: "Whats the purpose of using div tags in HTML?",
     choiceA: "for creating different styles",
     choiceB: "for creating different sections",
     choiceC: "for adding headings",
     choiceD: "for adding titles",
-    corrrectAnswer: "B"},
+    correctAnswer: "B"},
 {
     question: "Which of the following elements can be used in HTML to create a table?",
     choiceA: "<table> , <tbody> , <trow>",
     choiceB: "<table> , <tb> , <trow>",
     choiceC: "<table> , <tbody> , <tr>",
     choiceD: "All of the above",
-    corrrectAnswer: "D"},
+    correctAnswer: "D"},
 ];
 
 //Sets up the questions and answers//
 
 function generateQuizQuestion(){
     endQuizDiv.style.display = "none";
-    if (currentQuestionIndex === lastQuestionIndex) {
+    if (currentQuestionIndex === lastQuestionIndex){
         return endScore();
     }
     var currentQuestion = quizQuestions[currentQuestionIndex];
@@ -141,7 +141,7 @@ function endScore(){
     endQuizDiv.style.display = "flex";
     clearInterval(timerInterval);
     highScoreInitials.value = "";
-    endScore.innerHTML = "Your final score is " + score;
+    finalScore.innerHTML = "Your final score is " + score;
 }
 
 submitScoreButton.addEventListener("click", function highScore(){
@@ -152,7 +152,7 @@ submitScoreButton.addEventListener("click", function highScore(){
     }else{
         var savedHighscores = JSON.parse(localStorage.getItem("savedHighscores")) || [];
         var currentUser = highScoreInitials.value.trim();
-        var highScore = {
+        var currentHighScore = {
             name : currentUser,
             score : score
     };
@@ -162,7 +162,7 @@ submitScoreButton.addEventListener("click", function highScore(){
     totalPage.style.display = "block";
     finalButtons.style.display = "flex";
 
-    savedHighscores.push(highScore);
+    savedHighscores.push(currentHighScore);
     localStorage.setItem("savedHighScores", JSON.stringify(savedHighscores));
     showHighscores();
 
@@ -198,8 +198,15 @@ function viewScore(){
 
 //Checking answers//
 
+function clearTable(){
+    window.localStorage.clear();
+    highScoreInitials.textContent = "";
+    highScoresScore.textContent = "";
+}
+
 function checkAnswer(answer){
-    correct = quizQuestions[currentQuestionIndex].corrrectAnswer
+    correct = quizQuestions[currentQuestionIndex].correctAnswer;
+
     if (answer === correct && currentQuestionIndex !== lastQuestionIndex){
         score++;
         alert("Correct!");
@@ -214,12 +221,6 @@ function checkAnswer(answer){
     }
 
 //Clearing the table//
-
-function clearTable(){
-    window.localStorage.clear();
-    highScoreInitials.textContent = "";
-    highScoresScore.textContent = "";
-}
 }
 
 

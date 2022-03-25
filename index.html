@@ -9,18 +9,18 @@
 </head>
 
 <body>
-    <div id="front-page">
-    <header>
-        <h1 id="start-page-highscore" onclick="viewScore()">View High Scores</h1>
-        <h2 id=timer>Time:</h2>
-    </header>
-    </div>
 
-    <div class="container">
+    <header>
+        <h1>Coding Quiz</h1>
+        <h2 id="timer">Time:</h2>
+    </header>
+
+<div class="container">
 
         <div id="beginning-quiz">
             <h3>Try to answer the coding questions within the time limit. If you answer a question wrong you will lose 5 seconds on the clock.</h3>
         <button id="start-button">Start Quiz</button>
+        <button onclick="viewScore()">High Scores</button>
         </div>
 
         <div id="quiz">
@@ -49,7 +49,7 @@
         <div id="overall-highscore">
         <div id="total-page">
         
-            <div id="high-score-table">
+            <div id="highscore-table">
                 <h4>User Initials</h4>
                 <h4>Score</h4>
             </div>
@@ -64,8 +64,7 @@
             <button id="clear-highscore" onclick="clearTable()">Clear High Scores</button>
         </div>
         </div>
-    </div>
-
+</div>
     <script src="./assets/js/game.js"></script>
 
 </body>
