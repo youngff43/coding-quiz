@@ -38,6 +38,10 @@ button:hover {
     color: rgb(200, 147, 200);
 }
 
+h3 {
+    text-align: center;
+}
+
 .container {
     display: flex;
     justify-content: center;
@@ -56,6 +60,8 @@ button:hover {
 
 #quiz {
     display: none;
+    text-align: center;
+    align-items: center;
 }
 
 #answer-result {
@@ -72,11 +78,18 @@ button:hover {
 #total-page{
     display: none;
     border: solid;
+    width: 50%;
+    border-color: blueviolet;
+    border-bottom-style: double;
+    padding-bottom: 5px;
+    background: silver;
 }
 
 #highscore-table{
     display: flex;
     justify-content: space-around;
+    background-color: silver;
+    color: black;
 }
 
 #overall-highscore{
@@ -86,4 +99,41 @@ button:hover {
     flex-direction: column;
     align-items: center;
     justify-content: center;
+}
+
+#initials {
+    height: 10px;
+    margin: 2px;
+    color: black;
+}
+
+#highscore-initials {
+    display: inline-block;
+}
+
+#highscore-score {
+    float: right;
+}
+
+/* Table elements */
+
+li {
+    padding-bottom: 3px;
+    color: black;
+    list-style-type: none;
+}
+
+p {
+    color: black;
+    text-align: center;
+    font-size: medium;
+}
+
+h4 {
+    color: black;
+    margin-top: 3px;
+}
+
+input {
+    font-size: medium;
 }
