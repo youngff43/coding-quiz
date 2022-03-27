@@ -6,4 +6,11 @@ The user is presented with a coding quiz front page. If the user clicks "Start Q
 
 ## Screenshots of Quiz 
 
-![Picture of the Front Page](assets/images/front-page.PNG "Picture of the Front Page")
+![Picture of the Front Page](assets/images/front-page.png "Picture of the Front Page")
+![Picture of the Actual Quiz](assets/images/actual-quiz.png "Picture of a Quiz Question")
+![Picture of the High Scores Table](assets/images/high-scores-table.png "Picture of the High Scores Table")
+
+## Link to Take the Quiz 
+
+https://youngff43.github.io/coding-quiz/
+
