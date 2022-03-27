@@ -12,7 +12,6 @@
 
     <header>
         <h1>Coding Quiz</h1>
-        <h2 id="timer">Time:</h2>
     </header>
 
 <div class="container">
@@ -24,16 +23,18 @@
         </div>
 
         <div id="quiz">
-
+            <h2 id="timer">Time:</h2>
             <div id="questions">
                 <p>Question Placeholder</p>
             </div>
+        <div style="display:flex">
+
 
             <button id="a" onclick="checkAnswer('a')">A</button>
             <button id="b" onclick="checkAnswer('b')">B</button>
             <button id="c" onclick="checkAnswer('c')">C</button>
             <button id="d" onclick="checkAnswer('d')">D</button>
-
+        </div>
             <div id="answer-result"></div>
 
         </div>
@@ -54,9 +55,10 @@
                 <h4>Score</h4>
             </div>
 
-        <div id="highscore-initials"></div>
-        <div id="highscore-score"></div>
-
+            <div id="data-table" style="width:100%; display: flex;">
+        <div id="highscore-initials" style="width:50%"></div>
+        <div id="highscore-score" style="width: 50%"></div>
+            </div>
         </div>
 
         <div id="final-buttons">

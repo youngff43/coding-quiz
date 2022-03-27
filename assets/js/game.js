@@ -79,10 +79,10 @@ var quizQuestions = [{
     correctAnswer: "c"},
 {
     question: "Whats the purpose of using div tags in HTML?",
-    choiceA: "for creating different styles",
-    choiceB: "for creating different sections",
-    choiceC: "for adding headings",
-    choiceD: "for adding titles",
+    choiceA: "create different styles",
+    choiceB: "create different sections",
+    choiceC: "add headings",
+    choiceD: "add titles",
     correctAnswer: "b"},
 {
     question: "Which of the following elements can be used in HTML to create a table?",
@@ -164,6 +164,9 @@ submitScoreButton.addEventListener("click", function highScore(){
     finalButtons.style.display = "flex";
 
     savedHighscores.push(currentHighScore);
+    savedHighscores.sort(function(a,b){
+        return b.score-a.score
+    })
     localStorage.setItem("savedHighscores", JSON.stringify(savedHighscores));
     showHighscores();
 
