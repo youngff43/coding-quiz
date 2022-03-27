@@ -6,4 +6,4 @@ The user is presented with a coding quiz front page. If the user clicks "Start Q
 
 ## Screenshots of Quiz 
 
-![Picture of the Front Page](assets/images/front-page.png "Picture of the Front Page")
+![Picture of the Front Page](assets/images/front-page.PNG "Picture of the Front Page")
