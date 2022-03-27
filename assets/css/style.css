@@ -4,6 +4,7 @@
     padding: 0;
     background-color: lightgray;
     font-family: Arial, Helvetica, sans-serif;
+    font-size: large;
 }
 
 /* HEADER STYLES */
@@ -68,6 +69,12 @@ h3 {
     display: none;
 }
 
+#end-score {
+    font-size: x-large;
+    padding-bottom: 5px;
+    font-weight: bold;
+}
+
 #end-quiz {
     text-align: center;
     display: none;
@@ -76,13 +83,13 @@ h3 {
 }
 
 #total-page{
-    display: none;
     border: solid;
     width: 50%;
     border-color: blueviolet;
     border-bottom-style: double;
     padding-bottom: 5px;
     background: silver;
+    display: none;
 }
 
 #highscore-table{
@@ -102,17 +109,20 @@ h3 {
 }
 
 #initials {
-    height: 10px;
+    height: 30px;
     margin: 2px;
     color: black;
 }
 
 #highscore-initials {
     display: inline-block;
+    text-align: center;
+    margin-left: 140px;
 }
 
 #highscore-score {
     float: right;
+    margin-right: 120px;
 }
 
 /* Table elements */
@@ -121,19 +131,25 @@ li {
     padding-bottom: 3px;
     color: black;
     list-style-type: none;
+    background-color: silver;
+    font-style: bold;
 }
 
 p {
     color: black;
     text-align: center;
-    font-size: medium;
+    font-size: large;
 }
 
 h4 {
     color: black;
     margin-top: 3px;
+    background-color: silver;
 }
 
 input {
     font-size: medium;
+    text-align: center;
+    width: auto;
+    height: max-content;
 }

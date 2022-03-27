@@ -18,6 +18,7 @@ var finalButtons = document.getElementById("final-buttons");
 var highScoresScore = document.getElementById("highscore-score");
 var beginningQuiz = document.getElementById("beginning-quiz");
 var answerResult = document.getElementById("answer-result");
+var highscoreName = document.getElementById("initials")
 
 //Quiz Questions//
 var quizQuestions = [{
@@ -85,9 +86,9 @@ var quizQuestions = [{
     correctAnswer: "b"},
 {
     question: "Which of the following elements can be used in HTML to create a table?",
-    choiceA: "<table> , <tbody> , <trow>",
-    choiceB: "<table> , <tb> , <trow>",
-    choiceC: "<table> , <tbody> , <tr>",
+    choiceA: "table, tbody, trow",
+    choiceB: "table, tb, trow",
+    choiceC: "table, tbody, tr",
     choiceD: "All of the above",
     correctAnswer: "d"},
 ];
@@ -140,18 +141,18 @@ function showScore(){
     actualQuiz.style.display = "none"
     endQuizDiv.style.display = "flex";
     clearInterval(timerInterval);
-    highScoreInitials.value = "";
+    highscoreName.value = "";
     endScore.innerHTML = "Your final score is " + score;
 }
 
 submitScoreButton.addEventListener("click", function highScore(){
 
-    if(highScoreInitials.value === " ") {
+    if(highscoreName.value === " ") {
         alert("Cannot be blank");
         return false;
     }else{
         var savedHighscores = JSON.parse(localStorage.getItem("savedHighscores")) || [];
-        var currentUser = highScoreInitials.value.trim();
+        var currentUser = highscoreName.value.toUpperCase();
         var currentHighScore = {
             name : currentUser,
             score : score
@@ -177,7 +178,7 @@ function showHighscores(){
     highScoresScore.innerHTML = " ";
     var allScores = JSON.parse(localStorage.getItem("savedHighscores")) || [];
     for (i=0; i<allScores.length; i++) {
-        var currentPlayer = document.createElement("p");
+        var currentPlayer = document.createElement("li");
         var currentScore = document.createElement("li");
         currentPlayer.textContent = allScores[i].name;
         currentScore.textContent = allScores[i].score;
